@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrew Holland - MSBA Student & Data Analytics Professional</title>
+  <meta name="description" content="Andrew Holland's professional portfolio. Master's student specializing in data analytics with expertise in R, SQL, Python, and data visualization.">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Andrew Holland - MSBA Student & Data Analytics Professional">
+  <meta property="og:description" content="Professional portfolio showcasing data analytics projects and expertise in R, SQL, Python, and data visualization.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yoursite.com">
+  <!-- TODO: Add actual site URL above -->
+  <meta property="og:image" content="andrew-holland-professional.jpg">
+  
+  <!-- Structured Data - JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Andrew Holland",
+    "jobTitle": "Master's Student, MSBA",
+    "description": "Data analytics professional skilled in R, SQL, Python, C#, formal writing, and data visualization",
+    "url": "https://yoursite.com",
+    "sameAs": [
+      "https://github.com/andrewh-az",
+      "https://www.linkedin.com/in/andrew-holland-az/"
+    ],
+    "email": "andrewholland2373@gmail.com"
+  }
+  </script>
+  
+  <style>
+    /* CSS Reset & Base Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* CSS Variables for Theme Management */
+    :root {
+      --primary: #264C2F;
+      --secondary: #126F28;
+      --accent-1: #179134;
+      --accent-2: #1DB340;
+      --accent-3: #23DE4F;
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F8F9F8;
+      --text-primary: #1A1A1A;
+      --text-secondary: #4A4A4A;
+      --text-muted: #6B6B6B;
+      --border: #E0E0E0;
+      --shadow: rgba(38, 76, 47, 0.1);
+      --focus-ring: #1DB340;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-primary: #1A1A1A;
+        --bg-secondary: #242424;
+        --text-primary: #F0F0F0;
+        --text-secondary: #C8C8C8;
+        --text-muted: #9A9A9A;
+        --border: #3A3A3A;
+        --shadow: rgba(0, 0, 0, 0.3);
+      }
+    }
+    
+    /* Typography */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background-color: var(--bg-primary);
+      font-size: 16px;
+    }
+    
+    h1, h2, h3 {
+      line-height: 1.2;
+      font-weight: 600;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+    
+    h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    h3 {
+      font-size: 1.25rem;
+      color: var(--text-primary);
+    }
+    
+    p {
+      color: var(--text-secondary);
+    }
+    
+    a {
+      color: var(--secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    a:hover {
+      color: var(--accent-2);
+    }
+    
+    a:focus-visible {
+      outline: 2px solid var(--focus-ring);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+    
+    /* Layout Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #1a3821 100%);
+      padding: 4rem 0 3rem;
+      border-bottom: 3px solid var(--accent-2);
+    }
+    
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    
+    .header-text {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+    
+    .header-image {
+      flex-shrink: 0;
+    }
+    
+    .headshot {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent-3);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    
+    header h1 {
+      color: #FFFFFF;
+    }
+    
+    .role {
+      color: var(--accent-3);
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    
+    .tagline {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.125rem;
+      margin-top: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column-reverse;
+      }
+      
+      .headshot {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    
+    /* Section Styling */
+    section {
+      padding: 4rem 0;
+    }
+    
+    section:nth-of-type(even) {
+      background-color: var(--bg-secondary);
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, var(--primary) 0%, #1a3821 100%);
+      color: #FFFFFF;
+      border-radius: 8px;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
+    }
+    
+    /* About Section */
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .about-content p {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    
+    .skill-tag {
+      background-color: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    
+    /* Resume Section */
+    .resume-download {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    .btn-download {
+      display: inline-block;
+      background-color: var(--secondary);
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn-download:hover {
+      background-color: var(--accent-2);
+      color: white;
+      transform: translateY(-1px);
+    }
+    
+    .btn-download:active {
+      transform: translateY(0);
+    }
+    
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    .project-card {
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+    
+    .project-card:focus-within {
+      outline: 2px solid var(--focus-ring);
+      outline-offset: 2px;
+    }
+    
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: var(--bg-secondary);
+    }
+    
+    .project-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .project-title {
+      margin-bottom: 0.75rem;
+    }
+    
+    .project-title a {
+      color: var(--text-primary);
+    }
+    
+    .project-title a:hover {
+      color: var(--secondary);
+    }
+    
+    .project-description {
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+    
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: auto;
+    }
+    
+    .tag {
+      background-color: var(--bg-secondary);
+      color: var(--text-secondary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      border: 1px solid var(--border);
+    }
+    
+    /* Contact Section */
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+      align-items: center;
+    }
+    
+    @media (min-width: 640px) {
+      .contact-links {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+    
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.5rem;
+      background-color: var(--bg-primary);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+      min-width: 200px;
+      justify-content: center;
+    }
+    
+    .contact-link:hover {
+      border-color: var(--secondary);
+      background-color: var(--bg-secondary);
+    }
+    
+    .contact-icon {
+      width: 24px;
+      height: 24px;
+      fill: var(--secondary);
+    }
+    
+    .contact-text {
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    
+    footer p {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    /* Responsive Typography */
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .about-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header role="banner">
+    <div class="container">
+      <div class="header-content">
+        <div class="header-text">
+          <p class="role">Master's Student, MSBA</p>
+          <h1>Andrew Holland</h1>
+          <p class="tagline">Data Analytics Professional | R, SQL, Python & Data Visualization Expert</p>
+        </div>
+        <div class="header-image">
+          <img src="AndrewHeadshot.jpg" alt="Andrew Holland professional headshot" class="headshot" width="200" height="200">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title" class="section-title">About</h2>
+        <div class="about-content">
+          <p>Andrew Holland is a results-driven Business Analytics candidate with demonstrated expertise in data analysis, financial modeling, and process optimization. Currently pursuing a Master's in Business Analytics at the University of Arizona (expected May 2026), Andrew brings proven ability to translate complex data into actionable insights and strategic recommendations.</p>
+          <p>With experience as a Forensic Accounting intern at HKA, Andrew has designed comprehensive financial models supporting expert testimonies, performed quantitative research for strategic industry briefs, and built predictive models using advanced statistical techniques. Passionate about delivering high-impact solutions through cross-functional collaboration and advanced analytical methodologies.</p>
+          
+          <div class="skills">
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Data Visualization</span>
+            <span class="skill-tag">Statistical Analysis</span>
+            <span class="skill-tag">Machine Learning</span>
+          </div>
+          
+          <div class="resume-download">
+            <a href="https://drive.google.com/file/d/1k_Q1hXK09Efrd7JNvBaML75pqrWrI5Yf/view?usp=sharing" class="btn-download" target="_blank" rel="noopener noreferrer" aria-label="View Andrew Holland's resume">
+              View Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title" class="section-title">Projects</h2>
+        <div class="projects-grid">
+          
+          <!-- Project 1: ML Income Classifier -->
+          <article class="project-card">
+            <img 
+              src="MachineLearning.webp" 
+              alt="Machine learning income classifier visualization showing decision tree analysis"
+              class="project-image"
+              loading="lazy"
+              width="600"
+              height="200"
+            />
+            <div class="project-content">
+              <h3 class="project-title">
+                <a href="https://github.com/andrewh-az/ML_Income_Classifier_Using_UCI_Adult_Data_Set" target="_blank" rel="noopener noreferrer">
+                  ML Income Classifier
+                </a>
+              </h3>
+              <p class="project-description">
+                Developed a machine learning classifier using the UCI Adult Data Set to predict income levels based on demographic factors. Implemented multiple algorithms including decision trees and logistic regression, achieving significant predictive accuracy for income classification.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Python</span>
+                <span class="tag">Classification</span>
+                <span class="tag">UCI Dataset</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Minimum Wage Treatment Effect -->
+          <article class="project-card">
+            <img 
+              src="R.programming.webp" 
+              alt="Economic analysis visualization of minimum wage impact on employment"
+              class="project-image"
+              loading="lazy"
+              width="600"
+              height="200"
+            />
+            <div class="project-content">
+              <h3 class="project-title">
+                <a href="https://github.com/andrewh-az/Holland_Andrew_ECON418_FINAL-Estimating-the-Treatment-Effect-of-Minimum-Wage-increases-on-Employment" target="_blank" rel="noopener noreferrer">
+                  Minimum Wage Impact Analysis
+                </a>
+              </h3>
+              <p class="project-description">
+                Conducted econometric analysis estimating the treatment effect of minimum wage increases on employment levels. Applied advanced causal inference techniques and difference-in-differences methodology to isolate policy impacts from confounding variables.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Econometrics</span>
+                <span class="tag">R</span>
+                <span class="tag">Causal Inference</span>
+                <span class="tag">Policy Analysis</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: MIS 532 Project -->
+          <article class="project-card">
+            <img 
+              src="DatabaseSQL.jpg" 
+              alt="Business analytics dashboard showing data management and visualization"
+              class="project-image"
+              loading="lazy"
+              width="600"
+              height="200"
+            />
+            <div class="project-content">
+              <h3 class="project-title">
+                <a href="https://github.com/andrewh-az/MSBA-Summer-2025-MIS532" target="_blank" rel="noopener noreferrer">
+                  Data Management & Analytics
+                </a>
+              </h3>
+              <p class="project-description">
+                Comprehensive business analytics project demonstrating expertise in data management, ETL processes, and analytical reporting. Developed solutions for complex business intelligence scenarios with focus on scalability and performance optimization.
+              </p>
+              <div class="project-tags">
+                <span class="tag">SQL</span>
+                <span class="tag">Data Management</span>
+                <span class="tag">ETL</span>
+                <span class="tag">Business Intelligence</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Statistical Methods -->
+          <article class="project-card">
+            <img 
+              src="R.programming.webp" 
+              alt="Statistical analysis charts showing regression and hypothesis testing"
+              class="project-image"
+              loading="lazy"
+              width="600"
+              height="200"
+            />
+            <div class="project-content">
+              <h3 class="project-title">
+                <a href="https://github.com/andrewh-az/finalprojectECON453_Statistical_Analytical_Methods" target="_blank" rel="noopener noreferrer">
+                  Advanced Statistical Methods
+                </a>
+              </h3>
+              <p class="project-description">
+                Applied advanced statistical and analytical methods to economic research questions. Utilized regression analysis, hypothesis testing, and statistical modeling to derive meaningful insights from complex economic datasets.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Statistics</span>
+                <span class="tag">R</span>
+                <span class="tag">Regression Analysis</span>
+                <span class="tag">Econometrics</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section-title">Contact</h2>
+        <div class="contact-links">
+          
+          <a href="mailto:andrewholland2373@gmail.com" class="contact-link" aria-label="Email Andrew Holland">
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+              <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+            </svg>
+            <span class="contact-text">Email</span>
+          </a>
+
+          <a href="https://github.com/andrewh-az" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Andrew Holland's GitHub profile">
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+            </svg>
+            <span class="contact-text">GitHub</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/andrew-holland-az/" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Andrew Holland's LinkedIn profile">
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <span class="contact-text">LinkedIn</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 Andrew Holland. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
